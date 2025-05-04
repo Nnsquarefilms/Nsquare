@@ -1,120 +1,95 @@
-
-
-body{
-  
-background-color: black;
-  
+body {
+  background-color: black;
 }
-
-
-
 
 /* Cards */
-
-
-.Team_card{
-    display: flex;
-    flex-direction: column;
-    
-    justify-items: center;
-    justify-self: center;
-    align-self: center;
-  }
-  
-  .Team_card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color:white;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px #8dfe00;
-    border-radius: 10px;
-    padding: 20px;
-    width: 70%;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .Team_card :hover{
-    transform: scale(1.05);
-    transition: 1.3s;
-    
-  }
-
-
-  .teams_card{
-
-    display: flex;
-    flex-direction: row;
-  }
-
-
-  .teams_card .image :hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-  }
-  
-  .Team_card h3 {
-    color: #8dfe00;
-    justify-content: right;
-    margin-bottom: 15px;
-    
-  }
-
-.Team_card h3 :hover{
-    color: white;
+.Team_card {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px #8dfe00;
+  border-radius: 10px;
+  padding: 20px;
+  width: 70%;
+  transition: transform 0.3s ease-in-out;
 }
 
-  
-  .Team_card p{
-    color: #8dfe00;
-    font-size: 2rem;
-    
-  }
- 
+.Team_card:hover {
+  transform: scale(1.05);
+  transition: 1.3s;
+}
+
+.teams_card {
+  display: flex;
+  flex-direction: row;
+}
+
+.teams_card .image:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.Team_card h3 {
+  color: #8dfe00;
+  justify-content: right;
+  margin-bottom: 15px;
+}
+
+.Team_card h3:hover {
+  color: white;
+}
+
+.Team_card p {
+  color: #8dfe00;
+  font-size: 2rem;
+}
+
+/* Mobile responsiveness for team cards */
 @media (max-width: 768px) {
+  .Team_card {
+    width: 95%;
+    padding: 15px;
+  }
 
-    /* Adjust the card layout for smaller screens */
-    .Team_card {
-        width: 95%;  /* Make it take most of the screen width */
-        padding: 15px; /* Reduce padding for smaller screens */
-    }
+  .teams_card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    /* Adjust the team card content layout */
-    .teams_card {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center;
-        text-align: center; /* Center the text */
-    }
+  .teams_card .image {
+    width: 80%;
+    height: auto;
+    max-width: 250px;
+  }
 
-    /* Reduce image size */
-    .teams_card .image {
-        width: 80%; /* Reduce size */
-        height: auto;
-        max-width: 250px; /* Limit max width */
-    }
+  .teams_card h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
 
-    /* Make sure the text is centered */
-    .teams_card h3 {
-        font-size: 3rem; /* Reduce font size for smaller screens */
-        text-align: center;
-    }
+  .teams_card p {
+    font-size: 1.5rem;
+  }
 
-    .teams_card p {
-        font-size: 1.5rem; /* Reduce font size */
-    }
+  .Team_card p {
+    font-size: 1rem;
+    padding: 10px;
+  }
 
-    /* Reduce margin & padding for smaller screens */
-    .Team_card p {
-        font-size: 1rem;
-        padding: 10px;
-    }
-    #hertxt{
-      font-size: 1.5rem;
-    }
+  #hertxt {
+    font-size: 1.5rem;
+  }
+}
 
-
-
-
+/* Peaky movie container */
 .p3ky__container {
   max-width: 900px;
   margin: 4rem auto;
@@ -126,28 +101,24 @@ background-color: black;
   text-align: center;
 }
 
-/* Title */
 .peaky__heading {
   font-family: 'Pacifico', cursive;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
-/* Tagline */
 .mv__tagline_y {
   font-size: 1.2rem;
   color: #ccc;
   margin-bottom: 2rem;
 }
 
-/* Section title */
 .mv__funders_section {
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-/* Contributor block */
 .mv__funder_block {
   display: flex;
   align-items: center;
@@ -160,7 +131,6 @@ background-color: black;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
 }
 
-/* Contributor photo */
 .mv__funder_img {
   width: 64px;
   height: 64px;
@@ -169,13 +139,12 @@ background-color: black;
   border: 2px solid #fff;
 }
 
-/* Contributor text */
 .mv__funder_text {
   font-size: 1rem;
   color: #eee;
 }
 
-/* Responsive Adjustments */
+/* Responsive for Peaky Movie section */
 @media (max-width: 600px) {
   .p3ky__container {
     padding: 1rem;
@@ -199,7 +168,4 @@ background-color: black;
   .mv__funder_text {
     font-size: 0.95rem;
   }
-
-
-  
 }
